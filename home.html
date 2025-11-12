@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction System</h1>
+        <form id="predictForm">
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <select id="gender" required>
+                <option value="">-- Select Gender --</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label>Pregnancies:</label>
+            <input type="number" id="pregnancies" min="0" max="20" required>
+
+            <!-- ✅ Fields with range -->
+            <label>Glucose:</label>
+            <input type="number" id="glucose" min="0" max="300" required>
+
+            <label>Blood Pressure (mm Hg):</label>
+            <input type="number" id="bp" min="40" max="200" required>
+
+            <label>Insulin (µU/mL):</label>
+            <input type="number" id="insulin" min="0" max="900" required>
+
+            <label>BMI:</label>
+            <input type="number" step="0.1" id="bmi" min="10" max="70" required>
+
+            <label>Diabetes Pedigree Function:</label>
+            <input type="number" step="0.001" id="dpf" min="0.0" max="2.5" required>
+
+            <!-- ✅ Age without any range -->
+            <label>Age:</label>
+            <input type="number" id="age" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
